@@ -16,7 +16,7 @@ public class LinkedListTest {
   } 
 
   /**
-   * This is a Find Test. It looks through an empty Linked List
+   * This is a Find Test. It looks through an empty linkedList
    * and shows whether the Linked List is empty or if there are
    * any nodes in the Linked List. When the Linked List is empty,
    * it should be null.
