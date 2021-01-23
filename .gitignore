@@ -1,0 +1,7 @@
+#add files to ignore
+target
+.devcontainer
+.project
+.settings
+.vscode
+.classpath
