@@ -15,6 +15,12 @@ public class LinkedListTest {
     list = new LinkedList();
   } 
 
+  /**
+   * This is a Find Test. It looks through an empty Linked List
+   * and shows whether the Linked List is empty or if there are
+   * any nodes in the Linked List. When the Linked List is empty,
+   * it should be null.
+   */
   @Test
   @Tag("find")
   @DisplayName("find should return null when list is empty")
@@ -27,6 +33,12 @@ public class LinkedListTest {
     assertNull(o);
   }
 
+  /**
+   * This is a Find Test. It looks through a Linked List and
+   * finds the object's value that is located at that location
+   * while the Linked List is populated. This test uses 2 nodes
+   * in the Linked List.
+   */
   @Test
   @Tag("find")
   @DisplayName("find should return object in list at location")
@@ -41,6 +53,11 @@ public class LinkedListTest {
     assertEquals(1, i);
   }
 
+  /**
+   * This is a Find Test. It returns the object at a
+   * location in the Linked List and makes sure that that
+   * object is not null.
+   */
   @Test
   @Tag("find")
   @DisplayName("find should return object in list at location")
@@ -52,6 +69,10 @@ public class LinkedListTest {
     assertNull(o);
   }
 
+  /**
+   * This is a Disabled Test. It should not run becuase
+   * it is disabled.
+   */
   @Test
   @Disabled
   @DisplayName("A disabled test")
@@ -59,6 +80,12 @@ public class LinkedListTest {
     System.out.println("This test will not run.");
   }
 
+  /**
+   * This is a Nested Test. It tests the Remove Method in
+   * multiple ways. Before each test, it inserts a list of
+   * objects in the Linked List and then removes specific
+   * nodes that are given.
+   */
   @Nested
   @DisplayName("Testing functionality of removing nodes")
   class removeNodesTest {
@@ -75,10 +102,16 @@ public class LinkedListTest {
       list.insertNode(9);
     }
 
+    /**
+     * This is a Remove Test. It first assumes that the Linked
+     * List is not null. It then asserts two true statements to
+     * ensure that the remove methods function and return true
+     * after completeing their operation. 
+     */
     @Test
     @Tag("remove")
     @DisplayName("remove 2 nodes from linked list should return true")
-    void testRemoveTwoNodes() {
+    void testRemoveTwoNodes_ReturnTrue_WhenNodesAreInList() {
       assumeTrue(list != null);  
 
       assertAll(
@@ -96,6 +129,12 @@ public class LinkedListTest {
 
   }
 
+  /**
+   * This is a Size Test. It first assumes that the Linked
+   * List is empty. If the Linked List is empty, then the
+   * test inserts objects into the Linked List and checks its
+   * size, then removes an object and checks its size again.
+   */
   @Test
   @Tag("size")
   @DisplayName("testing size should be accurate while list changes size")
